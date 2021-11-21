@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Cards from "../modules/cards";
+import ConnectWalletButton from "../modules/connect-wallet";
 
 export default function Home() {
   return (
@@ -19,9 +20,8 @@ export default function Home() {
         <aside className="flex-[30%] bg-gray-50 relative sm:border-r border-black py-4">
           <div className="w-11/12 mx-auto">
             <h1 className="font-oleo text-2xl">wave</h1>
-            <button className="p-2 mt-8 sm:hidden block bg-black rounded text-white">
-              Connect Metamask
-            </button>
+            <ConnectWalletButton top />
+
             <p className="font-cookie mt-16 mb-4">
               Hey there{" "}
               <span role="img" aria-label="wave emoji" className="mr-2">
@@ -52,9 +52,7 @@ export default function Home() {
                 <span className="font-semibold mr-2">Total waves:</span>
                 <span>0</span>
               </div>
-              <button className="p-2 hidden sm:block  bg-black rounded text-white">
-                Connect Metamask
-              </button>
+              <ConnectWalletButton />
             </div>
           </div>
 
